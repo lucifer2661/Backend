@@ -1,0 +1,26 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+html,
+m body,
+#root
+{
+  height: 100%;
+  width:100%;
+}
+.note{
+background-color: antiquewhite;
+padding: 1rem;
+border-radius: 0.75rem;
+max-width: 20rem;
+color: brown;
+
+}
+.notes{
+  display: flex;
+  gap: 1rem;
+  padding-block: 1rem;
+  padding-inline: 3rem;
+}
