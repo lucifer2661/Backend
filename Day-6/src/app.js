@@ -27,6 +27,27 @@ app.post("/notes", async (req, res) => {
   });
 });
 
+/**
+ get/notes
+ read the notes 
+ use find() method 
+ */
+
+
+ app.get("/notes",async(req,res)=>{
+     
+ const notes= await noteModal.find()
+
+ res.status(200).json({
+    message: "Notes fetched succesfully",
+    notes
+ })
+
+
+ })
+
+
+
 
 /**
  server ko crate krna

@@ -1,26 +1,79 @@
-*{
-  margin: 0%;
-  padding: 0%;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-html,
-m body,
-#root
-{
-  height: 100%;
-  width:100%;
-}
-.note{
-background-color: antiquewhite;
-padding: 1rem;
-border-radius: 0.75rem;
-max-width: 20rem;
-color: brown;
 
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
 }
-.notes{
+
+body {
+  background-color: #f5f5f5;
+}
+
+.note {
+  background-color: antiquewhite;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  width: 20rem;
+  min-height: 10rem;
+  color: brown;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.note:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.note h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.note p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  word-break: break-word;
+}
+
+.notes {
   display: flex;
-  gap: 1rem;
-  padding-block: 1rem;
-  padding-inline: 3rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 2rem 3rem;
+}
+
+.note button {
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-right: 0.5rem;
+
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.note button:hover {
+  transform: scale(1.05);
+  opacity: 0.85;
+}
+
+/* Edit button */
+.note button:first-of-type {
+  background-color: #2563eb;
+  color: white;
+}
+
+/* Delete button */
+.note button:last-of-type {
+  background-color: #dc2626;
+  color: white;
 }
