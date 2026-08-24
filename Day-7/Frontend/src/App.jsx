@@ -8,7 +8,7 @@ function App() {
 function fetchNotes(){
 
 axios
-      .get("http://localhost:3000/api/notes")
+      .get("https://backend-c50p.onrender.com/api/notes")
       .then((res) => {
         console.log(res.data);
         setNotes(res.data.notes);
@@ -28,7 +28,7 @@ function handleSubmit(e) {
   console.log(title.value, description.value);
 
   axios
-    .post("http://localhost:3000/api/notes", {
+    .post("https://backend-c50p.onrender.com/api/notes", {
       title: title.value,
       description: description.value,
     })
@@ -45,7 +45,7 @@ function handleSubmit(e) {
 
 function handleDeleteNote(noteId){
 console.log(noteId);
-axios.delete("http://localhost:3000/api/notes/"+noteId)
+axios.delete("https://backend-c50p.onrender.com/api/notes/"+noteId)
 
 .then(res=>{
   console.log(res.data)
@@ -64,7 +64,7 @@ function handleEditNote(id,oldDescription){
     return;
   }
  axios
-    .patch("http://localhost:3000/api/notes/" + id, {
+    .patch("https://backend-c50p.onrender.com/api/notes/" + id, {
       description: newDescription
     })
     .then((res) => {
